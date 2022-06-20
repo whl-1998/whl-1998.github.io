@@ -142,6 +142,38 @@
             
 
 <div class="post">
+    <a href="/2022/06/20/photo/">
+        <h2>
+            Photo
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/6/20
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><img src="/3caa2d76496c248347e65065cf5213fd.jpeg"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/06/20/photo/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
     <a href="/2022/06/20/v/">
         <h2>
             V
@@ -184,13 +216,16 @@
     &#125;)
 &lt;/script&gt;
 </code></pre>
-<p><img src="/.io//DraggedImage.png" alt="DraggedImage"><br>后续的内容也没什么新的，基本上都是数据绑定显示，其余的都是比如 <code>textArea, select, checkbox ...</code> 这类 input 元素的示例。</p>
+<p><img src="/DraggedImage.png"></p>
+<p>后续的内容也没什么新的，基本上都是数据绑定显示，其余的都是比如 <code>textArea, select, checkbox ...</code> 这类 input 元素的示例。</p>
 <p> 比较有用的是Vue提供的修饰符：</p>
 <ul>
-<li><code>.lazy</code> 这个会在触发 change 事件后在进行双向绑定，比如现在是需要敲回车才会绑定，而不是立即绑定：<pre><code class="html">&lt;input v-model.lazy=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+<li><p><code>.lazy</code> 这个会在触发 change 事件后在进行双向绑定，比如现在是需要敲回车才会绑定，而不是立即绑定：</p>
+<pre><code class="html">&lt;input v-model.lazy=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
 </code></pre>
-  <img src="/.io//DraggedImage-1.png" alt="DraggedImage-1"></li>
-<li><code>number</code> 可以自动将用户输入类型转为数值类型，但如果是后续追加了无法转换的字符，比如 ‘abc’ 那么还是会按 ‘123’ 转数值。<pre><code class="html">&lt;div id=&quot;example&quot;&gt;
+</li>
+<li><p><code>number</code> 可以自动将用户输入类型转为数值类型，但如果是后续追加了无法转换的字符，比如 ‘abc’ 那么还是会按 ‘123’ 转数值。</p>
+<pre><code class="html">&lt;div id=&quot;example&quot;&gt;
     &lt;label&gt;
         &lt;input v-model.number=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
     &lt;/label&gt;
@@ -213,8 +248,9 @@
     &#125;)
 &lt;/script&gt;
 </code></pre>
-  <img src="/.io//DraggedImage-2.png" alt="DraggedImage-2"></li>
-<li><code>trim</code> 可以自动去除首尾的空字符<pre><code class="html">&lt;input v-model.trim=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+</li>
+<li><p><code>trim</code> 可以自动去除首尾的空字符</p>
+<pre><code class="html">&lt;input v-model.trim=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
 </code></pre>
 </li>
 </ul>
@@ -231,7 +267,7 @@
         
         <span class="tag">
             
-            <a href="/tags/vue" style="color: #03a9f4">
+            <a href="/tags/vue" style="color: #00bcd4">
                 vue
             </a>
         </span>
