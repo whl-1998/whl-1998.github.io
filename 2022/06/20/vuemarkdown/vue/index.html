@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Emo の小屋</title>
-        <meta name="author" content="otter">
+        <title>Vue | Emo の小屋</title>
+        <meta name="author" content="emo">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="icon" href="https://avatars.githubusercontent.com/u/39116602">
@@ -120,7 +120,7 @@
                         
 <div class="article">
     <div>
-        <h1> </h1>
+        <h1>Vue </h1>
     </div>
     <div class="info">
         <span class="date">
@@ -130,13 +130,83 @@
             2022/6/20
         </span>
         
+        <span class="category">
+            <a href="/categories/前端">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                前端
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/vue" style="color: #03a9f4">
+                    vue
+                </a>
+            </span>
+            
+        </span>
         
     </div>
     <div class="content" v-pre>
-        <hr>
-<h2 id="title-First-Night"><a href="#title-First-Night" class="headerlink" title=" title: First Night"></a> title: First Night</h2><blockquote>
-<p>我有一头<strong>小毛驴</strong>，可是我从来都不骑。</p>
-</blockquote>
+        <h3 id="Vue表单输入绑定"><a href="#Vue表单输入绑定" class="headerlink" title="Vue表单输入绑定"></a>Vue表单输入绑定</h3><p>这块内容主要是介绍 <code>v-model</code> 指令，用于表单输入文本与页面文本的双向数据绑定。<br>比如像这样：</p>
+<pre><code class="js">&lt;div id=&quot;example&quot;&gt;
+    &lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+    &lt;p&gt; Message is: &#123;&#123;message&#125;&#125; &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let example = new Vue(&#123;
+        el: &#39;#example&#39;,
+        data: &#123;
+            message: &#39;&#39;
+        &#125;,
+        methods: &#123;
+        &#125;
+    &#125;)
+&lt;/script&gt;
+</code></pre>
+<p><img src="/DraggedImage.png"><br>后续的内容也没什么新的，基本上都是数据绑定显示，其余的都是比如 <code>textArea, select, checkbox ...</code> 这类 input 元素的示例。</p>
+<p> 比较有用的是Vue提供的修饰符：</p>
+<ul>
+<li><code>.lazy</code> 这个会在触发 change 事件后在进行双向绑定，比如现在是需要敲回车才会绑定，而不是立即绑定：<pre><code class="js">&lt;input v-model.lazy=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+</code></pre>
+  <img src="/DraggedImage-1.png"></li>
+<li><code>number</code> 可以自动将用户输入类型转为数值类型，但如果是后续追加了无法转换的字符，比如 ‘abc’ 那么还是会按 ‘123’ 转数值。<pre><code class="js">&lt;div id=&quot;example&quot;&gt;
+    &lt;label&gt;
+        &lt;input v-model.number=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+    &lt;/label&gt;
+    &lt;p&gt; Message is: &#123;&#123;message&#125;&#125; , and the type is &#123;&#123;type&#125;&#125; &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let vm = new Vue(&#123;
+        el: &#39;#example&#39;,
+        data: &#123;
+            message: &#39;&#39;,
+            type: &#39;none&#39;,
+        &#125;,
+        watch: &#123;
+            // 如果 message 发生改变，那么这个函数需要执行
+            message: function () &#123;
+                this.type = typeof this.message
+            &#125;
+        &#125;,
+    &#125;)
+&lt;/script&gt;
+</code></pre>
+  <img src="/DraggedImage-2.png"></li>
+<li><code>trim</code> 可以自动去除首尾的空字符<pre><code class="js">&lt;input v-model.trim=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+</code></pre>
+</li>
+</ul>
 
     </div>
     
@@ -155,7 +225,7 @@
             <span class="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            @otter
+            @emo
         </div>
         <div></div>
         <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
