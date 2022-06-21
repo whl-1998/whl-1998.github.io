@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Emo の小屋</title>
+        <meta name="author" content="emo">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="https://avatars.githubusercontent.com/u/39116602">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">emo の小屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;emo の小屋</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1> </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/6/21
+        </span>
+        
+        
+    </div>
+    <div class="content" v-pre>
+        <h3 id="Last-Dance"><a href="#Last-Dance" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<span id="more"></span>
+
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-1"><a href="#Last-Dance-1" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-2"><a href="#Last-Dance-2" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-3"><a href="#Last-Dance-3" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-4"><a href="#Last-Dance-4" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-5"><a href="#Last-Dance-5" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-6"><a href="#Last-Dance-6" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+<h3 id="Last-Dance-7"><a href="#Last-Dance-7" class="headerlink" title="Last Dance"></a>Last Dance</h3><p>Biologists estimate that as many as 2 million lesser prairie chickens — a kind of bird living on stretching grasslands — once lent red to the often gray landscape of the midwestern and southwestern United States.</p>
+<blockquote>
+<p>生物学家估计，200w以下草原松鸡（一种生活在广袤草原上的鸟），曾经给中西部和西南部美国地区的灰色风景抹上了红色。</p>
+</blockquote>
+<p>But just some 22,000 birds remain today, occupying about 16% of the species’ historic range.</p>
+<blockquote>
+<p>但今天仅剩下22000只，几乎是该种群历史数量的16%</p>
+</blockquote>
+<p>The crash was a major reason the U.S Fish and Wildlife Service(USFWS) decided to formally list the bird as threatened.</p>
+<blockquote>
+<p>这也是 USFWS 决定将该鸟群列入濒危物种 的主要原因。</p>
+</blockquote>
+<p>“The lesser prairie chicken is in a desperate situation,” said USFWS Director Daniel Ashe.<br>Some environmentalists, however, were disappointed.</p>
+<blockquote>
+<p>“更少的草原松鸡正处于分离的现状”，USFWS管理层Daniel Ashe说。然而一些环境主义者对此感到失望。</p>
+</blockquote>
+<p>They had pushed the agency to designate the bird as “endangered,” a status that gives federal officials greater regulatory power to crack down on threats.</p>
+<blockquote>
+<p>他们催促USFWS去把这种鸟类列为濒危物种，这种现状就能够让联邦提高监管力度以镇压这种濒危现状。</p>
+</blockquote>
+<p>But Ashe and others argued that the “threatened” tag gave the federal government flexibility to try out new, potentially less confrontational conservations approaches.</p>
+<blockquote>
+<p>但Ashe和其他人反对，他们认为“濒危”这个标签给予联邦政府一种灵活性去尝试新的、更少的潜在对抗性的 交谈方式。</p>
+</blockquote>
+<p>In particular, they called for forging closer collaborations with western state governments, which are often uneasy with federal action and with the private landowners who control an estimated 95% of the prairie chicken’s habitat.</p>
+<blockquote>
+<p>尤其是，他们呼吁与西部政府更密切的合作（与联邦的行为、控制大约95%该鸟类栖息地私有领土占有者合作常常不简单）。</p>
+</blockquote>
+<p>Under the plan, for example, the agency said it would not prosecute landowner or businesses that unintentionally kill, harm, or disturb the bird, as long as they had signed a range—wide management plan to restore prairie chicken habitat.</p>
+<blockquote>
+<p>在这个计划下，比如，USFWS 说，它并不会检举领土占有者或者无意中杀害或扰乱松鸡的商业，只要他们签署了一份管理计划以修复松鸡的栖息地。</p>
+</blockquote>
+<p>Negotiated by USFWS and the states, the plan requires individuals and businesses that damage habitat as part of their operations to pay into a fund to replace every acre destroyed with 2 new acres of suitable habitat.</p>
+<blockquote>
+<p>USFWS与州政府的谈判得出，该计划要求（他们的部分行为伤害栖息地）个人和商业支付基金，每1亩地破坏，该基金就会购买新的2亩地。</p>
+</blockquote>
+<p>The fund will also be used to compensate landowners who set aside habitat, USFWS also set an interim goal of restoring prairie chicken populations to an annual average of 67,000 birds over the next 10 years.</p>
+<blockquote>
+<p>该基金也会被用于补偿留出栖息地的领土占有者，USFWS也设置了一个中期目标</p>
+</blockquote>
+<p>And it gives the Western Association of Fish and Wildlife Agencies (WAFWA), a coalition of state agencies, the job of monitoring progress.</p>
+<p>Overall, the idea is to let “states” remain in the driver’s seat for managing the species,” Ashe said.</p>
+<p>Not everyone buys the win-win rhetoric.</p>
+<p>Some Congress members are trying to block the plan, and at least a dozen industry groups, four states, and three environmental groups are challenging it in federal court.</p>
+<p>Not surprisingly, industry groups and states generally argue it goes too far; environmentalists say it doesn’t go far enough.</p>
+<p>“The federal government is giving responsibility for managing the bird to the same industries that are pushing it to extinction,” says biologist Jay Lininger.</p>
+
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2022 emo の小屋
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @emo
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+	<script src="/js/anime.min.js"></script>
+
+	<canvas id="fireworks" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647"></canvas>
+	<script src="/js/fireworks.js"></script>
+
+	<canvas id="background" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"></canvas>
+	<script src="/js/background.js"></script>
+
+
+
+        
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "", clientSecret = "";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "",
+        owner: "",
+        admin: [""],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: true
+    })
+    gitalk.render("gitalk-container")
+</script>
+
+
+    </body>
+</html>
